@@ -1,1 +1,51 @@
-<p>create-subscriber works!</p>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <div class="page-section">
+                        <div class="container">
+                          <h1 class="text-center wow fadeInUp">Crear usuario</h1>
+                            
+                          <form [formGroup]="usuarioForm" (ngSubmit)="SaveUser()" method="POST">
+                            <div class="row mb-3">
+                              <div class="col-sm-6 py-2 wow fadeInLeft">
+                                <label for="Name"></label>
+                                <input type="text" id="Name" class="form-control" formControlName="Name"  placeholder="Name..">
+                              </div>
+                              <div class="col-sm-6 py-2 wow fadeInRight">
+                                <label for="Email"></label>
+                                <input type="text" id="Email" class="form-control" placeholder="Email.." formControlName="Email">
+                              </div>
+                              <div class="col-sm-6 py-2 wow fadeInUp">
+                                <label for="CountryCode"></label>
+                                <input type="text" id="CountryCode" class="form-control" placeholder="CountryCode.." formControlName="CountryCode">
+                              </div>
+                              <div class="col-sm-6 py-2 wow fadeInUp">
+                                <label for="PhoneNumber"></label>
+                                <input type="text" id="PhoneNumber" class="form-control" placeholder="Teléfono.." formControlName="PhoneNumber">
+                              </div>
+                              <div class="col-sm-6 py-2 wow fadeInRight">
+                                <label for="JobTitle"></label>
+                                <input type="text" id="JobTitle" class="form-control" placeholder="JobTitle.." formControlName="JobTitle">
+                              </div>
+                              <div class="col-sm-6 py-2 wow fadeInRight">
+                                <label for="Area"></label>
+                                <input type="text" id="Area" class="form-control" placeholder="Area.." formControlName="Area">
+                              </div>
+                              <div class="col-sm-6 py-2 wow fadeInRight">
+                                <label for="Topics"></label>
+                                <input type="text" id="Topics" class="form-control" placeholder="Topics.." formControlName="Topics">
+                              </div>
+                            </div>
+                            <!-- si todos los campos no estan llenos no nos habilita el boton de enviar -->
+                            <!-- [disabled]="!usuarioForm.valid" -->
+                            <button  type="submit" class="btn btn-primary wow zoomIn" >Enviar</button>
+                          </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

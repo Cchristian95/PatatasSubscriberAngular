@@ -1,1 +1,45 @@
-<p>list-subscriber works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 ">
+            <div class="card">
+                <div class="card-body text-center">
+                    
+                    <span class="titulo" style="font-size: 32px;">Usuarios</span><br>
+                    <br>
+                    <a href="./create-subscriber" class="btn btn-success float-end">Nuevo Usuario</a>
+                    <table id="Tabla"  class="table table-success table-striped mt-4">
+                        <thead>
+                          <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">CountryCode</th>
+                            <th scope="col">PhoneNumber</th>
+                            <th scope="col">JobTitle</th>
+                            <th scope="col">Area</th>
+                            <th scope="col">Topics</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Eliminar</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let p of listadoRegistros">
+                            <td>{{p.Name}}</td>
+                            <td>{{p.Email}}</td>
+                            <td>{{p.CountryCode}}</td>
+                            <td>{{p.PhoneNumber}}</td>
+                            <td>{{p.JobTitle}}</td>
+                            <td>{{p.Area}}</td>
+                            <td>{{p.Topics}}</td>
+                            <td><i class='fa fa-check-square-o' style='color: blue' routerLink="/views/edit-subcriber/{{p.id}}"></i></td>
+                            <td>
+                            <i (click)="eliminarUsuario(p.id)" class='fa fa-trash' style='color: red'></i>
+                            </td>
+                          </tr> 
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

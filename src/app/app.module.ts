@@ -8,6 +8,8 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { IndexComponent } from './templates/index/index.component';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -15,13 +17,15 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms'
     HeaderComponent,
     FooterComponent,
     IndexComponent,
-    routingComponents
+    routingComponents,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
