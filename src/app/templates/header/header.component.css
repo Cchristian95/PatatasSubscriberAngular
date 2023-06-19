@@ -1,3 +1,6 @@
 .nav-link{
     color: gray;
 }
+.navbar-brand{
+    margin-left: 30px;
+}
