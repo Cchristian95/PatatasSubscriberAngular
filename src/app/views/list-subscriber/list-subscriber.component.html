@@ -4,9 +4,9 @@
             <div class="card">
                 <div class="card-body text-center">
                     
-                    <span class="titulo" style="font-size: 32px;">Usuarios</span><br>
+                    <span class="titulo" style="font-size: 32px;">Suscriptores</span><br>
                     <br>
-                    <a href="./create-subscriber" class="btn btn-success float-end">Nuevo Usuario</a>
+                    <a href="./create-subscriber" class="btn btn-primary mb-3 float-end">Nuevo Usuario</a>
                     <table id="Tabla"  class="table table-success table-striped mt-4">
                         <thead>
                           <tr>
@@ -22,7 +22,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr *ngFor="let p of listadoRegistros">
+                          <tr *ngFor="let p of listRegistration">
                             <td>{{p.Name}}</td>
                             <td>{{p.Email}}</td>
                             <td>{{p.CountryCode}}</td>

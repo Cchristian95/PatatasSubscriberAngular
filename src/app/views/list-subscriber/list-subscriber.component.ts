@@ -9,17 +9,17 @@ import Swal from 'sweetalert2';
   styleUrls: ['./list-subscriber.component.css']
 })
 export class ListSubscriberComponent {
-  listadoRegistros: ModelUser[]=[];
+  listRegistration: ModelUser[]=[];
 
   constructor(private usuarioServicio: UsersService) { }
 
   ngOnInit(): void {
-    this.ObtenerListadoUsuarios();
+    this.GetListRegistration();
   }
   //Llamamos al metodo
-  ObtenerListadoUsuarios(){
+  GetListRegistration(){
     this.usuarioServicio.getUser().subscribe((datos: ModelUser[])=>{
-      this.listadoRegistros = datos;
+      this.listRegistration = datos;
     })
   }
 
@@ -40,7 +40,7 @@ export class ListSubscriberComponent {
           'success'
         )
         this.usuarioServicio.deleteUser(id).subscribe(data => {
-          this.ObtenerListadoUsuarios();
+          this.GetListRegistration();
           
         },error => {
           console.log(error);
